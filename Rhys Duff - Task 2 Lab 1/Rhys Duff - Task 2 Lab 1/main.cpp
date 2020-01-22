@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iomanip>
-//test
+//test//test
 int main()
 {
 	srand(time(0));
