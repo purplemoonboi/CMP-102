@@ -6,7 +6,7 @@
 
 int main()
 {
-	srand(time(0));
+	srand(time(NULL));
 
 	Player Sid;
 	Player Joe;
@@ -19,10 +19,10 @@ int main()
 		
 			Sid.RunGame(Sid);
 			Joe.RunGame(Joe);
-		
+			Player::CalculateWinner(Sid, Joe);
 		
 	}
-	Player::CalculateWinner(Sid, Joe);
+	
 
 	Sid.~Player();
 	Joe.~Player();

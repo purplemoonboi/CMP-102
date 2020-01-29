@@ -12,9 +12,9 @@ private:
 
 	int BullsEyeCount;			//	How many bullseyes does 'this' player have.
 
-	int GameSet;				//	Total rounds played to achieve aim.
+	int GameSet;				//	Total sets played
 
-	
+	int TotalRounds;
 
 	float SuccessRate;			//	Out of the games played how likely were they to hit bullseye.
 		
@@ -27,7 +27,7 @@ private:
 	void SetName(std::string& l_name);					
 	void SetHitChance(int& l_hitchance);		
 
-	bool BullsEye(int& l_chance, Player& l_player);
+	bool BullsEye(Player& l_player);
 
 	float CalculateSuccessRate(int& l_tRounds, int& l_HitCount);	
 
@@ -39,7 +39,7 @@ public:
 	void RunGame(Player& l_player);
 	int GetScore();				//
 	int GetGameRound();			//	Public Getters 
-	int GetGameSet();		//
+	int GetGameSet();		
 
 	static int NumOfSetsToPlay;
 
@@ -49,6 +49,5 @@ public:
 	static void SetTotalGameSets(int& l_tGameSets);
 
 
-	//	I marked several functions and variables static another way would be to create a 'Game' class to handle generic data
-	//	such as game rounds etc.
+
 };
